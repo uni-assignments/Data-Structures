@@ -45,11 +45,11 @@ Nave FilaEncadeada::desenfileira(){
 }    
 
 void FilaEncadeada::limpa(){
-    CelulaFila *aux = this->frente;
-    while(!vazia()){
-        delete this->frente;
-        this->frente = aux->prox;
-        aux = this->frente;
+    CelulaFila *p = this->frente->prox;
+    while(p!=NULL){
+        this->frente->prox = p->prox;
+        delete p;
+        p = this->frente->prox;
     }
     tamanho = 0;
     tras = frente;

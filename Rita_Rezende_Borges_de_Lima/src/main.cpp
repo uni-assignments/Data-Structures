@@ -13,8 +13,8 @@ void operacao_pedida(int operacao, PilhaEncadeada *preparacao, ListaEncadeada *c
 			break;
 		case -1:
 			n = avariada->desenfileira();
-			printf("nave %d consertada\n", n.get_identificador());
 			preparacao->empilha(n);
+			printf("nave %d consertada\n", n.get_identificador());
 			break;
 		case -2:
 			preparacao->imprime();
@@ -46,17 +46,11 @@ int main() {
 		n = Nave(id_nave);
 		preparacao->empilha(n);
 	}
-	printf("Preparação: \n");
-	preparacao->imprime();
-	printf("Combate: \n");
-	combate->imprime();
-	printf("Avariada: \n");
-	avariada->imprime();
+
 	int operacao;
 	while(scanf("%d", &operacao) != EOF) {
 		operacao_pedida(operacao, preparacao, combate, avariada);
 	}
-	printf("pq a falha\n?");
 	delete preparacao;
 	delete combate;
 	delete avariada;

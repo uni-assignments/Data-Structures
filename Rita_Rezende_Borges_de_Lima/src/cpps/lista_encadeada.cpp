@@ -1,5 +1,4 @@
 #include "../headers/lista/lista_encadeada.hpp"
-#include "../headers/lista/exception.hpp"
 
 ListaEncadeada::ListaEncadeada(){
     this->primeiro = new CelulaLista();
@@ -10,17 +9,6 @@ ListaEncadeada::ListaEncadeada(){
 ListaEncadeada::~ListaEncadeada(){
     this->limpa();
     delete primeiro;
-}
-
-void ListaEncadeada::insere_inicio(Nave nave){
-    CelulaLista *nova = new CelulaLista();
-    nova->nave = nave;
-    nova->prox = this->primeiro->prox;
-    this->primeiro->prox = nova;
-    this->tamanho++;
-
-    if(nova->prox == NULL)
-        ultimo = nova;
 }
 
 void ListaEncadeada::insere_final(Nave nave){
@@ -50,18 +38,6 @@ Nave ListaEncadeada::remove_por_chave(int identificador){
         }
     }
     return n;
-}
-
-Nave ListaEncadeada::pesquisa(int chave){
-    CelulaLista *aux = this->primeiro;
-    while(aux!=NULL){
-        if(aux->nave.get_identificador() == chave){
-            return aux->nave;
-            break;
-        }
-        aux = aux->prox;
-    }   
-    return -1;
 }
 
 void ListaEncadeada::imprime(){

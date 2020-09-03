@@ -12,16 +12,8 @@ class ListaEncadeada{
         int getTamanho(){return this->tamanho;};
         bool vazia(){return this->tamanho == 0;};
 
-        Nave get_item(int pos);
-        void set_item(Nave nave, int pos);
-        void insere_inicio(Nave nave);
         void insere_final (Nave nave);
-        void insere_posicao (Nave nave, int pos);
-        Nave remove_inicio();
-        Nave remove_final ();
-        Nave remove_posicao (int pos);
         Nave remove_por_chave(int identificador);
-        Nave pesquisa(int chave);
         void imprime();
         void limpa();
 
