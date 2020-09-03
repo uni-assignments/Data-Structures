@@ -20,6 +20,7 @@ class ListaEncadeada{
         Nave remove_inicio();
         Nave remove_final ();
         Nave remove_posicao (int pos);
+        Nave remove_por_chave(int identificador);
         Nave pesquisa(int chave);
         void imprime();
         void limpa();

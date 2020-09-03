@@ -43,6 +43,7 @@ void PilhaEncadeada::imprime(){
     CelulaPilha *aux = this->topo;
     while(aux != NULL){
         aux->nave.imprime();
+        printf("\n");
         aux = aux->prox;
     }
     delete aux;

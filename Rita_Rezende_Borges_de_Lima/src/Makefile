@@ -35,14 +35,17 @@ TMPOUT=tp1.testresult
 # CMD sao os comandos necessarios para executar a regra (por exemplo, chamar o
 # gcc)
 
-$(EXEC): main.cpp pilha.o lista.o
-	$(CC) $(CFLAGS) main.cpp pilha.o lista.o -o $(EXEC)
+$(EXEC): main.cpp pilha.o lista.o fila.o
+	$(CC) $(CFLAGS) main.cpp pilha.o lista.o fila.o -o $(EXEC)
 
 pilha.o: cpps/pilha_encadeada.cpp # esse eh um exemplo, nao utilize esse tipo de nome (foo.cc, foo.h, foo.o) para seus arquivos
 	$(CC) $(CFLAGS) -c cpps/pilha_encadeada.cpp -o pilha.o
 
 lista.o: cpps/lista_encadeada.cpp # esse eh um exemplo, nao utilize esse tipo de nome (foo.cc, foo.h, foo.o) para seus arquivos
 	$(CC) $(CFLAGS) -c cpps/lista_encadeada.cpp -o lista.o
+
+fila.o: cpps/fila_encadeada.cpp # esse eh um exemplo, nao utilize esse tipo de nome (foo.cc, foo.h, foo.o) para seus arquivos
+	$(CC) $(CFLAGS) -c cpps/fila_encadeada.cpp -o fila.o
 
 test: $(EXEC)
 	@bash run_tests.sh $(EXEC) $(TMPOUT)
