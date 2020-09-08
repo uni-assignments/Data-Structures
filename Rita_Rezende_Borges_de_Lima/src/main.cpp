@@ -24,8 +24,9 @@ void operacao_pedida(int operacao, PilhaEncadeada *preparacao, ListaEncadeada *c
 			break;
 		default:
 			n = combate->remove_por_chave(operacao);
+			if(n.get_identificador() != -1)
+				avariada->enfileira(n);
 			printf("nave %d avariada\n", n.get_identificador());
-			avariada->enfileira(n);
 			break;
 	}
 }
@@ -46,7 +47,6 @@ int main() {
 		n = Nave(id_nave);
 		preparacao->empilha(n);
 	}
-
 	int operacao;
 	while(scanf("%d", &operacao) != EOF) {
 		operacao_pedida(operacao, preparacao, combate, avariada);

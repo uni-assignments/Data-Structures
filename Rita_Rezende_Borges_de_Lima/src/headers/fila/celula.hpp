@@ -1,7 +1,10 @@
 
 class CelulaFila{
     public:
-        CelulaFila(){};
+        CelulaFila(){
+            nave.set_identificador(-1);
+            prox = NULL;
+        };
 
     private:
         Nave nave;

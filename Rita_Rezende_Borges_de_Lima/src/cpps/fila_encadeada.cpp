@@ -21,27 +21,28 @@ void FilaEncadeada::imprime(){
     }
 }
 
-void FilaEncadeada::enfileira(Nave i){
+void FilaEncadeada::enfileira(Nave nave){
     CelulaFila *nova = new CelulaFila();
-    nova->nave = i;
+    nova->nave = nave;
     this->tras->prox = nova;
     this->tras = nova;
     this->tamanho++;
 }
-
+  
 Nave FilaEncadeada::desenfileira(){
-    CelulaFila *aux;
-    if(tamanho == 0)
-        throw "Fila está vazia!";
+    CelulaFila *p;
+    Nave aux;
     
-
-    Nave saida = this->frente->prox->nave; 
-    aux = this->frente;
-    this->frente = frente->prox;
+    if(this->vazia())
+        return -1;
+    
+    aux = this->frente->prox->nave;
+    p = this->frente;
+    this->frente = this->frente->prox;
+    delete p;
     this->tamanho--;
-    delete aux;
-    
-    return saida;
+
+    return aux;
 }    
 
 void FilaEncadeada::limpa(){

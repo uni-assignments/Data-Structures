@@ -15,18 +15,18 @@ void PilhaEncadeada::empilha(Nave nave){
     
     nova->nave = nave;
     nova->prox = topo;
-    topo = nova;
+    this->topo = nova;
     this->tamanho++;
 }
 
 Nave PilhaEncadeada::desempilha(){
-    Nave nave = topo->nave;
-    CelulaPilha *topo_antigo = topo;
-    
     if(tamanho == 0)
         throw "A pilha está vazia!";
     
-    topo = topo->prox;
+    Nave nave = this->topo->nave;
+    CelulaPilha *topo_antigo = this->topo;
+    
+    this->topo = this->topo->prox;
     delete topo_antigo;
     this->tamanho--;
 
@@ -35,7 +35,7 @@ Nave PilhaEncadeada::desempilha(){
 
 void PilhaEncadeada::limpa(){
     while(!this->vazia()){
-        desempilha();
+        this->desempilha();
     }
 }
 

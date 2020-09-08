@@ -21,22 +21,18 @@ void ListaEncadeada::insere_final(Nave nave){
 }
 
 Nave ListaEncadeada::remove_por_chave(int identificador){
-    CelulaLista *ant, *aux; 
+    CelulaLista *p, *aux; 
     Nave n = Nave(-1);
 
-    ant = this->primeiro;
-    aux = ant->prox;
-    while(aux!=NULL){
-        if(aux->nave.get_identificador() == identificador){
-            n = aux->nave;
-            ant->prox = aux->prox;
+    for (p = this->primeiro; p->prox != NULL;p = p->prox){
+		if (p->prox->nave.get_identificador() == identificador){
+			n = p->prox->nave;
+            aux = p->prox;
+            p->prox = aux->prox;
             delete aux;
-            break;
-        } else {
-            ant = ant->prox;
-            aux = aux->prox;
-        }
-    }
+            return n;
+		}
+	}
     return n;
 }
 
