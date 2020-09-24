@@ -2,12 +2,13 @@
 
 PilhaEncadeada::PilhaEncadeada(){
     topo = NULL;
-    tamanho = 0;
     this->tamanho = 0;
 }
 
 PilhaEncadeada::~PilhaEncadeada(){
-    this->limpa();
+    while(!this->vazia()){
+        this->desempilha();
+    }
 }
 
 void PilhaEncadeada::empilha(Nave nave){
@@ -31,12 +32,6 @@ Nave PilhaEncadeada::desempilha(){
     this->tamanho--;
 
     return nave;
-}
-
-void PilhaEncadeada::limpa(){
-    while(!this->vazia()){
-        this->desempilha();
-    }
 }
 
 void PilhaEncadeada::imprime(){

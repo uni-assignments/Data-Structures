@@ -20,7 +20,6 @@ class PilhaEncadeada{
 
         void empilha(Nave item);
         Nave desempilha();
-        void limpa();
         void imprime();
 
 };

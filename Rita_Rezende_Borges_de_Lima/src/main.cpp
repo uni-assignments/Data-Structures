@@ -3,7 +3,7 @@
 #include "./headers/lista/lista_encadeada.hpp"
 #include "./headers/fila/fila_encadeada.hpp"
 
-void operacao_pedida(int operacao, PilhaEncadeada *preparacao, ListaEncadeada *combate, FilaEncadeada *avariada){
+void operacao_solicitada(int operacao, PilhaEncadeada *preparacao, ListaEncadeada *combate, FilaEncadeada *avariada){
 	Nave n;
 	switch (operacao){
 		case 0:
@@ -49,7 +49,7 @@ int main() {
 	}
 	int operacao;
 	while(scanf("%d", &operacao) != EOF) {
-		operacao_pedida(operacao, preparacao, combate, avariada);
+		operacao_solicitada(operacao, preparacao, combate, avariada);
 	}
 	delete preparacao;
 	delete combate;
