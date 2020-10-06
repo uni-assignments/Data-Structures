@@ -64,10 +64,8 @@ int main(){
     char *nome;
     int num_civilizacoes, populacao, distancia;
     time_t start, end; 
-    double time_taken;     
 
     scanf("%d", &num_civilizacoes);
-
     Civilizacao *civilizacoes = (Civilizacao*)malloc(num_civilizacoes*sizeof(Civilizacao));
 
     for (int i = 0; i < num_civilizacoes; i++){
@@ -79,9 +77,7 @@ int main(){
     quick_sort(civilizacoes, 0, num_civilizacoes - 1);
     time(&end); 
 
-    time_taken = double(end - start); 
-    analise_experimental(time_taken);
-
+    analise_experimental(double(end - start));
 
     imprime(civilizacoes, num_civilizacoes);
     free(civilizacoes);
