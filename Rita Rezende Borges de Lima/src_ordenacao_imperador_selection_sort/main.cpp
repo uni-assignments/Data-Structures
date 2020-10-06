@@ -4,8 +4,7 @@
 
 #include "../headers/civilizacao.hpp"
 #include <stdlib.h>
-#include <string>
-
+#include <time.h> 
 
 void imprime(Civilizacao *civ, int num_civilizacoes){
     for (int i = 0; i < num_civilizacoes; i++){
@@ -28,6 +27,13 @@ void selection_sort(Civilizacao *civ, int num_civilizacoes){
         civ[menor_index] = aux;
     }
 }
+void analise_experimental(double tempo){
+    FILE *analise = fopen("analise_experimental.txt", "a");
+
+    fprintf(analise, "\n %.2f segundos", tempo);
+    fclose(analise); 
+}
+
 
 int main(){
     char *nome;
@@ -46,10 +52,11 @@ int main(){
     time(&start);     
     selection_sort(civilizacoes, num_civilizacoes);
     time(&end); 
+
     time_taken = double(end - start); 
-    
+    analise_experimental(time_taken);
+
     imprime(civilizacoes, num_civilizacoes);
-    printf("\n%.10f\n", time_taken);
     free(civilizacoes);
     return 0;
 }

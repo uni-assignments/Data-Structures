@@ -1,0 +1,11 @@
+Analise Experimental Bubble Sort
+
+0.00 segundos
+0.00 segundos
+0.00 segundos
+0.00 segundos
+1.00 segundos
+98.00 segundos
+641.00 segundos
+2672.00 segundos
+10218.00 segundos
