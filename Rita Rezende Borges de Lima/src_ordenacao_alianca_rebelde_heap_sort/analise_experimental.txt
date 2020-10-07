@@ -1,4 +1,4 @@
-Analise Experimental Quick Sort
+Analise Experimental Heap Sort
 
 0.00 segundos
 0.00 segundos
@@ -8,5 +8,5 @@ Analise Experimental Quick Sort
 0.00 segundos
 0.00 segundos
 0.00 segundos
-0.00 segundos
 1.00 segundos
+2.00 segundos
