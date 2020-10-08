@@ -6,8 +6,8 @@ TMPOUT=tp1.testresult
 $(EXEC): main.cpp civilizacao.o
 	$(CC) $(CFLAGS) main.cpp civilizacao.o -o $(EXEC)
 
-civilizacao.o: ../headers/civilizacao.cpp 
-	$(CC) $(CFLAGS) -c ../headers/civilizacao.cpp -o civilizacao.o
+civilizacao.o: ./headers/civilizacao.cpp 
+	$(CC) $(CFLAGS) -c ./headers/civilizacao.cpp -o civilizacao.o
 
 test: $(EXEC)
 	@bash ../run_tests.sh $(EXEC) $(TMPOUT)

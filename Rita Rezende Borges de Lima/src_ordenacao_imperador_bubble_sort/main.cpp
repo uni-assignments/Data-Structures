@@ -1,7 +1,7 @@
 //Colocar na documentação
 //https://stackoverflow.com/questions/38685724/difference-between-ms-and-s-scanf
 
-#include "../headers/civilizacao.hpp"
+#include "./headers/civilizacao.hpp"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h> 

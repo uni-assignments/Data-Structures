@@ -2,7 +2,7 @@
 //https://stackoverflow.com/questions/38685724/difference-between-ms-and-s-scanf
 //https://www.geeksforgeeks.org/measure-execution-time-with-high-precision-in-c-c/
 
-#include "../headers/civilizacao.hpp"
+#include "./headers/civilizacao.hpp"
 #include <stdlib.h>
 #include <time.h> 
 
