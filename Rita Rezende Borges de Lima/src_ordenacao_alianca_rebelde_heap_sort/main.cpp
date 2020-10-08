@@ -57,8 +57,9 @@ void analise_experimental(double tempo){
 
     fprintf(analise, "\n%.2f segundos", tempo);
     fclose(analise); 
+    
+    free(analise);
 }
-
 
 int main(){
     char *nome;
@@ -81,6 +82,9 @@ int main(){
     analise_experimental(double(end - start));
 
     imprime(civilizacoes, num_civilizacoes);
+    
+    free(nome);
     free(civilizacoes);
-    return 0;
+    
+    return 0;   
 }

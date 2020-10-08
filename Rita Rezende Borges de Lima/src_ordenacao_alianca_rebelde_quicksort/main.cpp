@@ -17,6 +17,8 @@ void analise_experimental(double tempo){
 
     fprintf(analise, "\n%.2f segundos", tempo);
     fclose(analise); 
+
+    free(analise);
 }
 int escolhe_pivot(Civilizacao *civ, int esq, int meio, int dir){
     
@@ -81,5 +83,7 @@ int main(){
 
     imprime(civilizacoes, num_civilizacoes);
     free(civilizacoes);
+    free(nome);
+
     return 0;
 }
