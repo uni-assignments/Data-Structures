@@ -30,7 +30,7 @@ void selection_sort(Civilizacao *civ, int num_civilizacoes){
 void analise_experimental(double tempo){
     FILE *analise = fopen("analise_experimental.txt", "a");
 
-    fprintf(analise, "\n %.2f segundos", tempo);
+    fprintf(analise, "\n%.2f segundos", tempo);
     fclose(analise); 
 }
 

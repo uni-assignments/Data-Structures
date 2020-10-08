@@ -1,8 +1,11 @@
 Analise Experimental Selection Sort
 
- 0.00 segundos
- 0.00 segundos
- 0.00 segundos
- 0.00 segundos
- 0.00 segundos
- 63.00 segundos
+0.00 segundos
+0.00 segundos
+0.00 segundos
+0.00 segundos
+0.00 segundos
+66.00 segundos
+416.00 segundos
+1583.00 segundos
+6273.00 segundos
