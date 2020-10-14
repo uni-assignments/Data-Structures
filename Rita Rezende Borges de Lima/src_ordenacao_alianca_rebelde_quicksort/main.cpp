@@ -79,7 +79,7 @@ int main(){
     quick_sort(civilizacoes, 0, num_civilizacoes - 1);
     time(&end); 
 
-    analise_experimental(double(end - start));
+    //analise_experimental(double(end - start));
 
     imprime(civilizacoes, num_civilizacoes);
     free(civilizacoes);

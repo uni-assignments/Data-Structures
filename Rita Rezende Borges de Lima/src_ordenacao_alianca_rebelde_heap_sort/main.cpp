@@ -79,7 +79,7 @@ int main(){
     heap_sort(civilizacoes, num_civilizacoes - 1);
     time(&end); 
 
-    analise_experimental(double(end - start));
+    //analise_experimental(double(end - start));
 
     imprime(civilizacoes, num_civilizacoes);
     

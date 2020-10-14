@@ -10,7 +10,7 @@ civilizacao.o: civilizacao.cpp
 	$(CC) $(CFLAGS) -c civilizacao.cpp -o civilizacao.o
 
 test: $(EXEC)
-	@bash ../run_tests.sh $(EXEC) $(TMPOUT)
+	@bash ./run_tests.sh $(EXEC) $(TMPOUT)
 
 clean: # remove todos os arquivos temporarios que forem gerados pela compilacao
 	rm -rf civilizacao.o

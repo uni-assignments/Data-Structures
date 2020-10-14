@@ -55,7 +55,7 @@ int main(){
     bubble_sort(civilizacoes, num_civilizacoes);
     time(&end); 
 
-    analise_experimental(double(end - start));
+    //analise_experimental(double(end - start));
 
     imprime(civilizacoes, num_civilizacoes);
     free(civilizacoes);

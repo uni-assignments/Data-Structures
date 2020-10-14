@@ -56,7 +56,7 @@ int main(){
     time(&end); 
 
     time_taken = double(end - start); 
-    analise_experimental(time_taken);
+    //analise_experimental(time_taken);
 
     imprime(civilizacoes, num_civilizacoes);
     
