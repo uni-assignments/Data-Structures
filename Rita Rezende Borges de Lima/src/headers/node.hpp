@@ -6,12 +6,15 @@ class Node {
     public:
         Node(char *value);
         
-        int is_bigger_then_value(char *word);
+        int is_bigger_than_value(char *word);
+        int is_smaller_than_value(char *word);
         int left_child_exists();
         int right_child_exists();
-        int node_contains_key(char **values, int amount_words);
+        int node_contains_key(char *values);
+        Node *right_most_child();
+
     
-    private:
+    protected:
         char *value;
         Node *leftChild;
         Node *rightChild;

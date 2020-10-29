@@ -5,6 +5,7 @@ for i in {0..3..1}; do
   testname=$(printf "%01d" $i)
   $EXEC < ./../tests/$testname.in > $TMP_OUT
   if ! diff -qwB ./../tests/$testname.out $TMP_OUT &>/dev/null; then
+    diff -ywB ./../tests/$testname.out $TMP_OUT >../outputs/$testname.out
     echo "Test $testname failed"
   else
     echo "Test $testname passed"

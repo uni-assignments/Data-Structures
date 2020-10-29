@@ -47,6 +47,7 @@ void operation_substitute(BinaryTree *tree){
 
 int main(){
     char op = ' ';
+    
     BinaryTree *tree = new BinaryTree();
     
     while(scanf("%c", &op) != EOF){
@@ -58,9 +59,6 @@ int main(){
             case 's': operation_substitute(tree);
                 break;
             case 'd': operation_decrypt(tree);
-                break;
-            case 'p': 
-                tree->print_tree(tree->get_root());
                 break;
             default:
                 break;
