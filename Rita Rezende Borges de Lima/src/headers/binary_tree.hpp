@@ -7,6 +7,7 @@ class BinaryTree {
     
     public:
         BinaryTree();
+        ~BinaryTree();
         
         void insert(char *value);
         void substitute(char *old_value, char *new_value);
@@ -14,6 +15,7 @@ class BinaryTree {
         char *decrypt(int to_decrypt);
         
     private:
+        void recursive_delete(Node *n);
         void recursive_insert(char *value, Node *n);    
         void predecessor(Node* node, Node* &right);
         void remove_node(Node* &node, char *value);

@@ -7,6 +7,18 @@ BinaryTree::BinaryTree(){
     this->root = nullptr;
 }
 
+void BinaryTree::recursive_delete(Node *n){
+    if(n != nullptr){
+        recursive_delete(n->leftChild);
+        recursive_delete(n->rightChild);
+        delete n;
+    }
+}
+BinaryTree::~BinaryTree(){
+    this->recursive_delete(this->root);
+    this->root = nullptr;
+}
+
 void BinaryTree::recursive_insert(char *value, Node *node){
     Node *aux;
     

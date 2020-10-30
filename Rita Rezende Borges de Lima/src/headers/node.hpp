@@ -5,6 +5,7 @@ class Node {
     
     public:
         Node(char *value);
+        ~Node();
         
         int is_bigger_than_value(char *word);
         int is_smaller_than_value(char *word);

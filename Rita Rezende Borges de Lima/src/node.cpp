@@ -1,10 +1,15 @@
 #include "./headers/node.hpp"
 #include <string.h>
+#include <cstdlib>  
+
 
 Node::Node(char *value){
     this->value = value;
     this->leftChild = nullptr;
     this->rightChild = nullptr;    
+}
+
+Node::~Node(){
 }
 
 int Node::is_bigger_than_value(char *word){

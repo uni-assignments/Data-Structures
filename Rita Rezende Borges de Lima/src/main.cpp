@@ -8,6 +8,7 @@ void operation_insert(BinaryTree *tree){
     
     scanf("%ms", &new_word);
     tree->insert(new_word);
+
 }
 
 void operation_encrypt(BinaryTree *tree){
@@ -64,6 +65,6 @@ int main(){
                 break;
         }
     }
-
+    delete tree;
     return 0;   
 }
