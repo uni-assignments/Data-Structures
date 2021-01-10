@@ -1,0 +1,12 @@
+Analise Experimental Heap Sort
+
+0.00 segundos
+0.00 segundos
+0.00 segundos
+0.00 segundos
+0.00 segundos
+0.00 segundos
+1.00 segundos
+1.00 segundos
+1.00 segundos
+2.00 segundos
